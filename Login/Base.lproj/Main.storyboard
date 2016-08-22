@@ -39,7 +39,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="account.png" highlightedImage="account.png" translatesAutoresizingMaskIntoConstraints="NO" id="gf8-Zj-B0s">
                                 <rect key="frame" x="62" y="65" width="196" height="198"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dc1-5R-1Ui">
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dc1-5R-1Ui">
                                 <rect key="frame" x="167" y="407" width="94" height="30"/>
                                 <state key="normal" title="Đăng nhập" backgroundImage="color.png">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -55,37 +55,33 @@
                                 </state>
                                 <connections>
                                     <action selector="action_dangki:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vhu-vT-gDV"/>
-                                    <action selector="action_login:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xp4-M2-PHP"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kiz-P8-NbF">
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kiz-P8-NbF">
                                 <rect key="frame" x="60" y="445" width="94" height="30"/>
                                 <state key="normal" title="Sửa" backgroundImage="color.png">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="action_login:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GWp-BO-1vY"/>
                                     <action selector="action_sua:" destination="BYZ-38-t0r" eventType="touchUpInside" id="F9U-Ij-edf"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TJa-fo-hUm">
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TJa-fo-hUm">
                                 <rect key="frame" x="167" y="445" width="94" height="30"/>
                                 <state key="normal" title="Xoá" backgroundImage="color.png">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="action_login:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2FX-fd-Z6N"/>
                                     <action selector="action_xoa:" destination="BYZ-38-t0r" eventType="touchUpInside" id="heU-1g-fWe"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cGb-hD-HUD">
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cGb-hD-HUD">
                                 <rect key="frame" x="49" y="483" width="223" height="30"/>
                                 <state key="normal" title="Danh sách người dùng" backgroundImage="color.png">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="action_list:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OrX-iR-gE2"/>
-                                    <action selector="action_login:" destination="BYZ-38-t0r" eventType="touchUpInside" id="q9H-4k-brZ"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -98,7 +94,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-429" y="257"/>
+            <point key="canvasLocation" x="-425" y="177"/>
         </scene>
     </scenes>
     <resources>

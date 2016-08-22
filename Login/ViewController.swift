@@ -16,7 +16,6 @@ class ViewController: UIViewController {
     var accounts = ["payet":"123","kante":"456","sonic":"789"]
     
     @IBAction func action_login(sender: UIButton) {
-        if sender.titleLabel?.text == "Đăng nhập" {
             if let password = accounts[tf_user.text!]
             {
                 if password == tf_password.text
@@ -32,7 +31,6 @@ class ViewController: UIViewController {
             {
                 print("Tài khoản không tồn tại")
             }
-        }
     }
     func CheckUser() -> Int {
         let user = tf_user.text
@@ -46,8 +44,6 @@ class ViewController: UIViewController {
         return dem
     }
     @IBAction func action_dangki(sender: UIButton) {
-        if sender.titleLabel?.text == "Đăng ký" {
-        
             let user = String(tf_user.text!)
             let pass = String(tf_password.text!)
             //var dem = 0
@@ -72,22 +68,26 @@ class ViewController: UIViewController {
                     }
                 }
             }
-        }
     }
     @IBAction func action_xoa(sender: UIButton) {
-        if sender.titleLabel?.text == "Xoá" {
-            if tf_user.text == "" {
-                print("Bạn chưa nhập tài khoản muốn xoá")
-            }
-            else
-            {
-                accounts.removeValueForKey("\(tf_user.text)")
-            }
-        }
+                if CheckUser() > 0
+                {
+                    if accounts["\(String(tf_user.text!))"] == String(tf_password.text!)
+                    {
+                        accounts.removeValueForKey("\(String(tf_user.text!))")
+                        print("Đã xoá")
+                    }
+                    else
+                    {
+                        print("Không thể xoá (Mật khẩu sai)")
+                    }
+                }
+                else
+                {
+                    print("Tài khoản không tồn tại")
+                }
     }
     @IBAction func action_sua(sender: UIButton) {
-        if sender.titleLabel?.text == "Sửa"
-        {
             if CheckUser() > 0 {
                 if tf_password.text == "" {
                     print("Bạn chưa nhập mật khẩu mới")
@@ -102,14 +102,11 @@ class ViewController: UIViewController {
             {
                 print("Tài khoản không tồn tại")
             }
-        }
     }
     @IBAction func action_list(sender: UIButton) {
-        if sender.titleLabel?.text == "Danh sách người dùng" {
             for user in accounts {
                 print(user)
             }
-        }
     }
     override func viewDidLoad() {
         super.viewDidLoad()
